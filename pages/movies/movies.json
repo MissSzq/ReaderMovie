@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "光与影",
+  "usingComponents":{
+    "movie-list":"/components/movie-list/movie-list",
+    "movie-grid":"/components/movie-grid/movie-grid"
+  }
+}

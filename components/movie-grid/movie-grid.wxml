@@ -1,0 +1,7 @@
+<scroll-view class='move-grid-container' scroll-y="true" scroll-x="false" bindscrolltolower="_onScrollLower">
+  <block wx:for="{{movies}}" wx:for-item="movie">
+    <view class='single-view-container'>
+      <movie movie="{{movie}}" ></movie>
+    </view>
+  </block>
+</scroll-view>

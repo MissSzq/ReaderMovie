@@ -1,0 +1,26 @@
+<view class='search'>
+  <icon type='search' class='search-img' size="13" color='#405f80' />
+  <input type='text' placeholder='你的名字、你好明天' holder-class="placeholder" bindfocus='onBindFocus' bindconfirm='bindconfirm' />
+  <image src='/images/icon/xx.png' wx:if="{{searchPanelShow}}" class='xx-img' bindtap='onCancelImgTap'></image>
+</view>
+<view class='container' wx:if="{{containerShow}}">
+  <view class="movies-template">
+    <movie-list allData="{{inTheaters}}" ></movie-list>
+  </view>
+  <view class="movies-template">
+    <movie-list allData="{{comingSoon}}" ></movie-list>
+  </view>
+  <view class="movies-template">
+    <movie-list allData="{{top250}}" ></movie-list>
+  </view>
+  <!-- <view class="movies-template">
+    <template is="movieListTemplate" data="{{...comingSoon}}" />
+  </view>
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...top250}}" />
+  </view> -->
+</view>
+
+<view class='search-panel' wx:if="searchPanelShow">
+  <movie-grid movies="{{searchResult.movies}}"></movie-grid>
+</view>
